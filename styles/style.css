@@ -1,0 +1,421 @@
+/* -- Web Fonts -- */
+
+@font-face {
+    font-family: 'Roboto-Mono';
+    src: url('../fonts/Roboto-Mono/robotomono-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto-Mono/robotomono-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Mono';
+    src: url('../fonts/Roboto-Mono/static/RobotoMono-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mochiy-Pop-P-One';
+    src: url('../fonts/Mochiy-Pop-P-One/MochiyPopPOne-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -- General Formatting -- */
+
+html {
+    font-family: 'Roboto-Mono', 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    font-size: 2.78vw;
+}
+
+/* For 720p+ screens */
+@media (min-width: 80rem) {
+    html {
+        font-size: 1.094vw;
+    }
+}
+
+/* For 1080p+ screens */
+@media (min-width: 120rem) {
+    html {
+        font-size: 0.834vw;
+    }
+}
+
+/* -- Logo -- */
+
+#logo {
+    width: 83%;
+    margin: 0px 0px 0px 10px;
+}
+
+@media (min-width: 80rem) {
+    #logo {
+        margin: 0px;
+    }
+}
+
+/* -- Name -- */
+
+#name {
+    font-size: 5vw;
+    height: max-content;
+    width: max-content;
+    align-self: center;
+    font-family: 'Mochiy-Pop-P-One';
+    margin: 0px 0px 0px 10px;
+}
+
+#name span {
+    font-size: 2.5vw;
+}
+
+@media (min-width: 80rem) {
+    #name {
+        font-size: 2.344vw;
+        justify-self: end;
+        margin: 0px;
+    }
+
+    #name span {
+        font-size: 1.172vw;
+    }
+}
+
+@media (min-width: 120rem) {
+    #name {
+        font-size: 2.084vw;
+    }
+
+    #name span {
+        font-size: 1.042vw;
+    }
+}
+
+/* -- Header Picture -- */
+
+#headerpic {
+    align-self: end;
+    width: 80.25%;
+}
+
+@media (min-width: 80rem) {
+    #headerpic {
+        width: 65%;
+    }
+}
+
+/* -- Rectangles -- */
+
+#rect1,
+#rect3 {
+    background-color: #2660A4; /* Lapis Lazuli */
+}
+
+/* -- Navigation Menu -- */
+
+nav ul {
+    list-style-type: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    padding-left: 0px;
+}
+
+nav a {
+    text-decoration: none;
+    flex: 0.0125 0 auto;
+    text-align: center;
+}
+
+nav a:link {
+    color: white;
+}
+
+nav a:focus,
+nav a:hover {
+    color: #3980D0; /* Steel Blue */
+}
+
+nav a:active {
+    color: #F19953; /* Sandy Brown */
+}
+
+#currentpg {
+    border-bottom: 0.15rem solid;
+}
+
+/* -- Footer -- */
+
+footer {
+    padding: 40px 0px;
+    color: #EEF4FB; /* Alice Blue */
+}
+
+/* -- Footer Logo -- */
+
+#footerlogo {
+    justify-self: center;
+    width: 73.79%;
+}
+
+/* -- Footer Navigation Menu -- */
+
+#footernav {
+    list-style-type: none;
+    font-weight: bold;
+    padding-left: 20px;
+    justify-self: center;
+}
+
+#footernav li {
+    margin-bottom: 8px;
+}
+
+#footernav a {
+    text-decoration: none;
+    display: block;
+    width: max-content;
+}
+
+#footernav a:link {
+    color: white;
+}
+
+#footernav a:focus,
+#footernav a:hover {
+    color: #3980D0; /* Steel Blue */
+}
+
+#footernav a:active {
+    color: #F19953; /* Sandy Brown */
+}
+
+@media (min-width: 80rem) {
+    #footernav {
+        padding-left: 0px;
+    }
+}
+
+/* -- Office Info Tables -- */
+
+#officehours,
+#officeaddress {
+    width: max-content;
+    justify-self: right;
+    text-align: right;
+}
+
+#officehours th,
+#officehours td,
+#officeaddress th,
+#officeaddress td {
+    padding: 0px 16px;
+}
+
+#officehours thead th,
+#officeaddress thead th {
+    font-size: 1.125rem;
+}
+
+#officehours tbody th,
+#officeaddress tbody th {
+    font-weight: normal;
+}
+
+/* -- Office Address and Phone -- */
+
+#officeaddress address,
+#officephone {
+    font-style: normal;
+}
+
+/* -- Copyright Notice -- */
+
+#copyrightnotice span {
+    font-size: 0.75rem;
+}
+
+@media (min-width: 80rem) {
+    #copyrightnotice {
+        margin: 0px;
+    }
+}
+
+/* ---- General Layout ---- */
+
+/* Layout consists of 12 columns */
+body {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    margin: 0px;
+}
+
+/* ---- Mobile Layout ---- */
+
+body > * {
+    grid-column: col-start / span 12;
+}
+
+header {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: subgrid;
+}
+
+/* -- Header Sublayout -- */
+
+#logo {
+    grid-column: col-start / span 5;
+}
+
+#name {
+    grid-column: col-start / span 9;
+}
+
+#headerpic {
+    grid-column: col-start 10 / span 3;
+}
+
+/* ---------------------- */
+
+#rect1 {
+    grid-row: 2;
+}
+
+nav {
+    grid-column: col-start 2 / span 10;
+    grid-row: 2;
+}
+
+main {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: subgrid;
+}
+
+main > * {
+    grid-column: col-start / span 12;
+}
+
+#rect3 {
+    grid-row: 4;
+}
+
+footer {
+    grid-row: 4;
+    display: grid;
+    gap: inherit;
+    grid-template-columns: subgrid;
+}
+
+/* -- Footer Sublayout -- */
+
+footer > * {
+    grid-column: col-start / span 12;
+}
+
+#footerlogo {
+    grid-column: col-start / span 2;
+}
+
+#footernav {
+    grid-column: col-start / span 2;
+    grid-row: 2 / 4;
+}
+
+#officehours {
+    grid-column: col-start 3 / span 10;
+    grid-row: 2;
+}
+
+#officeaddress {
+    grid-column: col-start 3 / span 10;
+    grid-row: 3;
+}
+
+#copyrightnotice {
+    grid-column: col-start 2 / span 10;
+}
+
+/* ---- 720p Layout ---- */
+
+@media (min-width: 80rem) {
+    body {
+        gap: 20px;
+    }
+
+    header {
+        grid-column: col-start 2 / span 10;
+    }
+
+    /* -- Header Sublayout -- */
+
+    #logo {
+        grid-column: col-start / span 3;
+    }
+
+    #name {
+        grid-column: col-start 5 / span 4;
+    }
+
+    #headerpic {
+        grid-column: col-start 9 / span 2;
+    }
+
+    /* ---------------------- */
+
+    #rect1 {
+        grid-row: 2;
+    }
+
+    main {
+        grid-column: col-start 2 / span 10;
+    }
+
+    #rect3 {
+        grid-row: 4;
+    }
+
+    footer {
+        grid-column: col-start 2 / span 10;
+        grid-row: 4;
+    }
+
+    /* -- Footer Sublayout -- */
+
+    #footerlogo {
+        grid-column: col-start / span 1;
+    }
+
+    #footernav {
+        grid-column: col-start 2 / span 1;
+        grid-row: 1;
+    }
+
+    #officehours {
+        grid-column: col-start 7 / span 4;
+        grid-row: 1;
+    }
+
+    #officeaddress {
+        grid-column: col-start 8 / span 3;
+        grid-row: 2;
+    }
+
+    #copyrightnotice {
+        grid-column: col-start / span 10;
+    }
+}
+
+/* ---- 1080p Layout ---- */
+
+@media (min-width: 120rem) {
+    /* -- Footer Sublayout -- */
+
+    #officehours {
+        grid-column: col-start 8 / span 3;
+    }
+}

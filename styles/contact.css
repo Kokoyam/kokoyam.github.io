@@ -1,0 +1,61 @@
+/* -- Office Address Table Formatting -- */
+
+#officeaddress {
+    margin-bottom: 20px;
+}
+
+/* -- Main Sublayout -- */
+
+/* -- Mobile Layout -- */
+
+#introheader {
+    grid-column: col-start 2 / span 10;
+}
+
+#officephone {
+    grid-column: col-start 2 / span 3;
+}
+
+#officehours {
+    grid-column: col-start 2 / span 10;
+    grid-row: 3;
+}
+
+#officeaddress {
+    grid-column: col-start 2 / span 10;
+    grid-row: 4;
+}
+
+/* -- 720p Layout -- */
+
+@media (min-width: 80rem) {
+    #officephone {
+        grid-column: col-start 2 / span 2;
+    }
+
+    #officehours {
+        grid-column: col-start 4 / span 4;
+        grid-row: 2;
+    }
+    
+    #officeaddress {
+        grid-column: col-start 5 / span 3;
+        grid-row: 3;
+    }
+}
+
+/* -- 1080p Layout -- */
+
+@media (min-width: 120rem) {
+    #officephone {
+        grid-column: col-start 2 / span 1;
+    }
+
+    #officehours {
+        grid-column: col-start 3 / span 3;
+    }
+    
+    #officeaddress {
+        grid-column: col-start 3 / span 3;
+    }
+}

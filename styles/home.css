@@ -1,0 +1,138 @@
+/* -- Buttons Formatting -- */
+
+#learnmore a,
+#makeappt a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: max-content;
+}
+
+#learnmore p,
+#makeappt p {
+    background-color: #2660A4; /* Lapis Lazuli */
+    color: white;
+    border-radius: 16px;
+    padding: 8px 24px;
+    font-weight: bold;
+}
+
+#learnmore p:focus,
+#learnmore p:hover,
+#makeappt p:focus,
+#makeappt p:hover {
+    background-color: #3980D0; /* Steel Blue */
+}
+
+#learnmore p:active,
+#makeappt p:active {
+    background-color: #F19953; /* Sandy Brown */
+}
+
+/* -- Main Picture -- */
+
+#mainpic {
+    object-fit: contain;
+    height: 500px;
+    max-width: 100%;
+    justify-self: center;
+    margin: 4% 0px;
+}
+
+@media (min-width: 80rem) {
+    #mainpic {
+        justify-self: end;
+    }
+}
+
+/* -- Rectangle -- */
+
+#rect2 {
+    background-color: #CDDFF3; /* Columbia Blue */
+}
+
+/* -- Support -- */
+
+#support {
+    text-align: center;
+}
+
+/* -- Main Sublayout -- */
+
+/* -- Mobile Layout -- */
+
+#intro {
+    grid-column: col-start 2 / span 10;
+}
+
+#mainpic {
+    grid-column: col-start 2 / span 10;
+}
+
+#dentalservices {
+    grid-column: col-start 2 / span 10;
+}
+
+#learnmore {
+    grid-column: col-start 2 / span 10;
+}
+
+#makeappt {
+    grid-column: col-start 2 / span 10;
+}
+
+#rect2 {
+    grid-row: 6;
+}
+
+#support {
+    grid-row: 6;
+}
+
+/* -- 720p Layout -- */
+
+@media (min-width: 80rem) {
+    #intro {
+        grid-column: col-start 2 / span 4;
+    }
+
+    #mainpic {
+        grid-column: col-start 6 / span 4;
+        grid-row: 1 / 4;
+    }
+
+    #dentalservices {
+        grid-column: col-start 2 / span 4;
+    }
+
+    #learnmore {
+        grid-column: col-start 2 / span 2;
+    }
+
+    #makeappt {
+        grid-column: col-start 2 / span 3;
+    }
+
+    #rect2 {
+        grid-column: col-start / span 10;
+        grid-row: 5;
+    }
+
+    #support {
+        grid-column: col-start 2 / span 8;
+        grid-row: 5;
+    }
+}
+
+/* -- 1080p Layout -- */
+
+@media (min-width: 120rem) {
+    #learnmore {
+        grid-row: 3;
+    }
+
+    #makeappt {
+        grid-column: col-start 3 / span 3;
+        grid-row: 3;
+    }
+}
