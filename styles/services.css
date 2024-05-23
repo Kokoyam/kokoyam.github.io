@@ -1,0 +1,39 @@
+/* -- Service Lists Formatting -- */
+
+#servicelists {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* For 720p+ screens */
+@media (min-width: 80rem) {
+    #servicelists {
+        justify-content: space-around;
+    }
+}
+
+/* -- Main Sublayout -- */
+
+/* -- Mobile Layout -- */
+
+#servicedescs,
+#servicelists {
+    grid-column: col-start 2 / span 10;
+}
+
+/* -- 720p Layout -- */
+
+@media (min-width: 80rem) {
+    #servicedescs,
+    #servicelists {
+        grid-column: col-start 2 / span 8;
+    }
+}
+
+/* -- 1080p Layout -- */
+
+@media (min-width: 120rem) {
+    
+}
