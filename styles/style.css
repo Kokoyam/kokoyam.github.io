@@ -225,10 +225,9 @@ footer {
     font-weight: normal;
 }
 
-/* -- Office Address and Phone -- */
+/* -- Office Address -- */
 
-#officeaddress address,
-#officephone {
+#officeaddress address {
     font-style: normal;
 }
 

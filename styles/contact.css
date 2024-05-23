@@ -1,4 +1,10 @@
-/* -- Office Address Table Formatting -- */
+/* -- Office Phone Formatting -- */
+
+#officephone {
+    font-style: normal;
+}
+
+/* -- Office Address Table -- */
 
 #officeaddress {
     margin-bottom: 20px;

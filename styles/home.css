@@ -39,6 +39,7 @@
     margin: 4% 0px;
 }
 
+/* For 720p+ screens */
 @media (min-width: 80rem) {
     #mainpic {
         justify-self: end;
