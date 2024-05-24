@@ -1,10 +1,25 @@
-/* -- Service Lists Formatting -- */
+/* -- Rectangle Formatting -- */
+
+#rect4 {
+    background-color: #CDDFF3; /* Columbia Blue */
+}
+
+/* -- Service Lists -- */
 
 #servicelists {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+#servicelists > * {
+    border: 2px solid #2660A4; /* Lapis Lazuli */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 2px;
+    border-radius: 2%;
+    width: 400px;
 }
 
 /* For 720p+ screens */
@@ -12,15 +27,27 @@
     #servicelists {
         justify-content: space-around;
     }
+
+    #servicelists > * {
+        width: initial;
+    }
 }
 
 /* -- Main Sublayout -- */
 
 /* -- Mobile Layout -- */
 
+#rect4 {
+    grid-row: 2;
+}
+
 #servicedescs,
 #servicelists {
     grid-column: col-start 2 / span 10;
+}
+
+#servicelists {
+    grid-row: 2;
 }
 
 /* -- 720p Layout -- */
